@@ -1,6 +1,8 @@
 #
 # Was curious to whether you can loop on IO.gets until something isn't empty
-# though this seems to be a clean solution
+# though this seems to be a clean solution that could be testable
+#   Since the seeding will be the same in a single run, a unit test could be done
+#   assert_equal Greeter.msg("Ben"), "Hello, Ben, #{Greeter.random_msg}"
 #
 
 :random.seed(:erlang.now)
