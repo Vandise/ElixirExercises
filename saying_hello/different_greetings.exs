@@ -33,4 +33,17 @@ defmodule Greeter do
   
 end
 
+ExUnit.start
+
+defmodule GreeterTest do
+  use ExUnit.Case
+  
+  test "Generates a greeting messages for a specific user" do
+    output = Greeter.msg("Ben")
+    assert String.starts_with? output, "Hello, Ben,"
+    assert String.contains? output, ["nice to meet you!","how's it going?","whaz up?!?"]
+  end
+  
+end
+
 IO.puts Greeter.greet
